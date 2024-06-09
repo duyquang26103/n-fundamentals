@@ -12,8 +12,6 @@ import { Playlist } from './playlists/playlists.entity';
 import { PlaylistsModule } from './playlists/playlists.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { UsersController } from './users/users.controller';
-import { UsersService } from './users/users.service';
 
 @Module({
   imports: [
@@ -34,8 +32,8 @@ import { UsersService } from './users/users.service';
       synchronize: true,
     }),
   ],
-  controllers: [AppController, UsersController],
-  providers: [AppService, UsersService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule implements NestModule {
   constructor(private dataSource: DataSource) {}
