@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  my-sql:
+    image: mysql:latest
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: quang
+      MYSQL_PASSWORD: quang
+    volumes:
+      - .common/db/mysql:/var/lib/mysql
